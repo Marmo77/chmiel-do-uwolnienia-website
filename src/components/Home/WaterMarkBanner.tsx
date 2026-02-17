@@ -1,9 +1,7 @@
-import React from "react";
-
 const WaterMarkBanner = ({
   creatorName = "Marmo77",
   email = "oflebled@gmail.com",
-  phone = "+48 501 677 281",
+  //   phone = "+48 501 677 281",
 }) => {
   return (
     <div className="sticky bottom-0 right-0 w-full z-50 bg-yellow-400/90 text-yellow-950 px-4 py-1.5 shadow-sm backdrop-blur-sm">

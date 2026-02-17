@@ -4,7 +4,10 @@ import { siteData } from "../../data/siteData";
 
 const InfoSection = () => {
   return (
-    <section className="bg-[#050505] relative overflow-hidden border-t border-white/5">
+    <section
+      className="bg-[#050505] relative overflow-hidden border-t border-white/5"
+      id="about"
+    >
       {/* Background Ambience */}
       <div className="absolute left-0 bottom-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 translate-y-1/2" />
 
