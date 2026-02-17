@@ -4,6 +4,7 @@ import { menuData } from "../../data/menuData";
 import LoadingSkeletons from "../../LoadingSkeletons";
 import { Dialog, DialogContent } from "../ui/dialog";
 import { ZoomIn } from "lucide-react";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const MenuSection: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -90,8 +91,8 @@ const MenuSection: React.FC = () => {
                       alt={`${category.label} menu strona ${index + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-[1.04] transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                      <div className="bg-white/90 backdrop-blur text-foreground px-4 py-2 rounded-full font-bold shadow-lg flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                    <div className="absolute inset-0 bg-black/0 md:group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                      <div className="bg-white/90 backdrop-blur text-foreground px-4 py-2 rounded-full font-bold shadow-lg flex items-center gap-2 transform translate-y-4 md:opacity-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300 opacity-100">
                         <ZoomIn className="w-4 h-4" /> Powiększ
                       </div>
                     </div>
@@ -107,13 +108,28 @@ const MenuSection: React.FC = () => {
         open={!!selectedImage}
         onOpenChange={() => setSelectedImage(null)}
       >
-        <DialogContent className="max-w-5xl bg-transparent shadow-none border-none p-0 flex items-center justify-center">
+        <DialogContent className="max-w-[95vw] w-full h-fit bg-transparent shadow-none border-none p-0 flex items-center justify-center overflow-hidden">
           {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Menu Full Screen"
-              className="w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            />
+            <div className="w-full h-fit flex items-center justify-center relative">
+              {/* Close instruction or button could go here if X is not enough */}
+              <TransformWrapper
+                initialScale={1}
+                minScale={1}
+                maxScale={4}
+                centerOnInit
+              >
+                <TransformComponent
+                  wrapperClass="w-full h-full flex items-center justify-center"
+                  contentClass="flex items-center justify-center"
+                >
+                  <img
+                    src={selectedImage}
+                    alt="Menu Full Screen"
+                    className="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl"
+                  />
+                </TransformComponent>
+              </TransformWrapper>
+            </div>
           )}
         </DialogContent>
       </Dialog>

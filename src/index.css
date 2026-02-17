@@ -1,7 +1,7 @@
-@import "tailwindcss";
-/* @import "tw-animate-css"; */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
   --color-border: var(--border);
@@ -45,7 +45,7 @@
     /* Warm Off-White Background */
     --background: oklch(0.97 0.01 85);
     /* Dark Charcoal Text for readability */
-    --foreground: oklch(0.2 0.02 260);
+    --foreground: oklch(14.355% 0.00176 197.472);
 
     /* White Cards */
     --card: oklch(1 0 0);

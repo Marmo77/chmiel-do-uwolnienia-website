@@ -1,9 +1,13 @@
 import { Button } from "../ui/button";
 import { ArrowRight, Beer, Utensils } from "lucide-react";
+import { siteData } from "../../data/siteData";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background">
+    <section
+      id="start"
+      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background"
+    >
       {/* Background Image with Blur */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat scale-105"
@@ -48,7 +52,10 @@ const Hero = () => {
             className="h-16 px-12 text-xl font-display tracking-wide rounded-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_15px_rgba(222,124,0,0.5)] hover:shadow-[0_0_25px_rgba(222,124,0,0.7)] hover:-translate-y-1 transition-all border-none"
             onClick={() =>
               document
-                .getElementById("menu")
+                .getElementById(
+                  siteData.navItems.find((item) => item.label === "Menu")?.id ||
+                    "menu",
+                )
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
@@ -60,7 +67,7 @@ const Hero = () => {
             className="h-16 px-8 text-xl font-display tracking-wide rounded-full bg-transparent hover:bg-white/10 border-2 border-white text-white hover:border-white transition-all backdrop-blur-sm"
             onClick={() =>
               document
-                .getElementById("rezerwacja")
+                .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
           >
