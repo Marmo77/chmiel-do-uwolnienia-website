@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Beer, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "../ui/button";
 import { cn } from "../../lib/utils";
 import { siteData } from "../../data/siteData";
@@ -35,13 +35,13 @@ const Navbar: React.FC<NavbarProps> = ({
         >
           <div
             className={cn(
-              "p-2.5 rounded-xl transition-transform duration-300 shadow-lg",
+              "p-2 rounded-lg transition-transform duration-300 shadow-lg",
               isScrolled
                 ? "bg-primary text-primary-foreground"
                 : "bg-white/10 backdrop-blur-md text-primary border border-white/20",
             )}
           >
-            <Beer className="h-8 w-8" />
+            <img src={siteData.logo_full} alt="Logo" className="h-10 w-10" />
           </div>
           <div className="flex flex-col items-start leading-none">
             <span

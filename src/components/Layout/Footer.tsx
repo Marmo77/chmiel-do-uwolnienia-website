@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Beer, Facebook, Instagram, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
 import { siteData } from "../../data/siteData";
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  handleNavigation: (id: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ handleNavigation }) => {
   return (
     <footer className="bg-[#0a0a0a] text-white border-t border-white/5 relative overflow-hidden">
       {/* Background Texture */}
@@ -14,8 +18,12 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="md:col-span-1 space-y-6">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="p-2 rounded-lg bg-primary text-primary-foreground">
-                <Beer className="h-6 w-6" />
+              <div className="p-1.5 rounded-lg bg-primary text-primary-foreground">
+                <img
+                  src={siteData.logo_full}
+                  alt="Logo"
+                  className="h-10 w-10"
+                />
               </div>
               <div className="flex flex-col items-start leading-none">
                 <span className="text-2xl font-display font-bold tracking-wider text-white">
@@ -34,12 +42,14 @@ const Footer: React.FC = () => {
               <a
                 href={siteData.socials.facebook}
                 className="p-2 rounded-full bg-white/5 hover:bg-primary hover:text-black transition-all"
+                target="_blank"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href={siteData.socials.instagram}
                 className="p-2 rounded-full bg-white/5 hover:bg-primary hover:text-black transition-all"
+                target="_blank"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -55,21 +65,13 @@ const Footer: React.FC = () => {
               {siteData.navItems.map((item) => (
                 <li key={item.id}>
                   <a
-                    href={`#${item.id}`}
-                    className="hover:text-primary transition-colors"
+                    onClick={() => handleNavigation(item.id)}
+                    className="hover:text-primary transition-colors cursor-pointer"
                   >
                     {item.label}
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href="#contact"
-                  className="hover:text-primary transition-colors"
-                >
-                  Rezerwacja
-                </a>
-              </li>
             </ul>
           </div>
 

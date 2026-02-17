@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import LoadingSkeletons from "./LoadingSkeletons";
+import SEOHead from "./components/SEO/SEOHead";
 
 // Lazy load the Home component
 const Home = lazy(() => import("./components/Home/Home"));
@@ -15,6 +16,7 @@ const App: React.FC = () => {
             path="/"
             element={
               <Layout>
+                <SEOHead />
                 <Home />
               </Layout>
             }

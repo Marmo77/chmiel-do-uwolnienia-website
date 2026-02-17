@@ -1,0 +1,248 @@
+{
+  "site": {
+    "name": "CHMIEL Do Uwolnienia",
+    "tagline": "Uwolnij Chmiel - Gastropub w Goleniowie",
+    "description": "Autorskie burgery, rzemieślnicze piwo kraftowe i wyjątkowa atmosfera w sercu Goleniowa. CHMIEL Do Uwolnienia to gastropub, gdzie tradycja spotyka się z nowoczesnością. Zarezerwuj stolik lub zamów online!",
+    "url": "https://chmieldouwolnienia.pl",
+    "language": "pl",
+    "locale": "pl_PL",
+    "type": "restaurant"
+  },
+  "business": {
+    "legalName": "CHMIEL Do Uwolnienia",
+    "category": "Gastropub",
+    "priceRange": "$$",
+    "cuisineType": ["Amerykańska", "Pub Food", "Burgery", "Piwo Kraftowe"],
+    "servesCuisine": ["American", "Polish", "Pub Food"],
+    "foundingYear": 2020,
+    "acceptsReservations": true,
+    "paymentAccepted": ["Gotówka", "Karta", "Płatności cyfrowe"]
+  },
+  "contact": {
+    "phone": "+48451568912",
+    "phoneDisplay": "451 568 912",
+    "email": "pub@chmieldouwolnienia.pl",
+    "address": {
+      "street": "ul. Nadrzeczna 8",
+      "city": "Goleniów",
+      "region": "Zachodniopomorskie",
+      "postalCode": "72-100",
+      "country": "Polska",
+      "countryCode": "PL",
+      "full": "ul. Nadrzeczna 8, 72-100 Goleniów, Polska",
+      "latitude": "53.5628098",
+      "longitude": "14.8259717"
+    }
+  },
+  "hours": {
+    "monday": "Nieczynne",
+    "tuesday": "14:00-22:30",
+    "wednesday": "14:00-22:30",
+    "thursday": "14:00-22:30",
+    "friday": "13:00-00:00",
+    "saturday": "13:00-00:00",
+    "sunday": "13:00-22:00",
+    "timezone": "Europe/Warsaw"
+  },
+  "seo": {
+    "title": "CHMIEL Do Uwolnienia - Gastropub Goleniów | Burgery & Piwo Kraftowe",
+    "titleTemplate": "%s | CHMIEL Do Uwolnienia",
+    "description": "Najlepszy gastropub w Goleniowie! Autorskie burgery, rzemieślnicze piwo kraftowe, ogródek piwny i wyjątkowa atmosfera. Rezerwacje: 451 568 912. Zamów online!",
+    "keywords": [
+      "gastropub Goleniów",
+      "burgery Goleniów",
+      "piwo kraftowe Goleniów",
+      "restauracja Goleniów",
+      "pub Goleniów",
+      "chmiel do uwolnienia",
+      "najlepsze burgery",
+      "craft beer",
+      "ogródek piwny",
+      "rezerwacja stolika Goleniów",
+      "jedzenie na wynos Goleniów",
+      "lunch Goleniów",
+      "imprezy urodzinowe Goleniów",
+      "przyjazny dla psów pub",
+      "parking Goleniów restauracja"
+    ],
+    "author": "CHMIEL Do Uwolnienia",
+    "robots": "index, follow",
+    "googlebot": "index, follow",
+    "canonical": "https://chmieldouwolnienia.pl"
+  },
+  "openGraph": {
+    "type": "restaurant",
+    "title": "CHMIEL Do Uwolnienia - Gastropub Goleniów | Burgery & Piwo Kraftowe",
+    "description": "Uwolnij swoje zmysły! Autorskie burgery, rzemieślnicze piwo kraftowe i klimat, który karmi zmysły. Najlepszy gastropub w Goleniowie.",
+    "url": "https://chmieldouwolnienia.pl",
+    "siteName": "CHMIEL Do Uwolnienia",
+    "locale": "pl_PL",
+    "images": [
+      {
+        "url": "https://chmieldouwolnienia.pl/og-image.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "CHMIEL Do Uwolnienia - Gastropub w Goleniowie"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "site": "@chmieldouwolnienia",
+    "title": "CHMIEL Do Uwolnienia - Gastropub Goleniów",
+    "description": "Autorskie burgery, rzemieślnicze piwo kraftowe i wyjątkowa atmosfera. Zarezerwuj stolik: 451 568 912",
+    "image": "https://chmieldouwolnienia.pl/twitter-image.jpg",
+    "imageAlt": "CHMIEL Do Uwolnienia Gastropub"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/chmieldouwolnienia",
+    "instagram": "https://www.instagram.com/chmieldouwolnienia/",
+    "googleMaps": "https://www.google.com/maps/place/CHMIEL+DO+UWOLNIENIA+-+Restaurant+%26+Pub/@53.5629654,14.8258664,20.75z/data=!4m6!3m5!1s0x47009ed0be6cffab:0x322aae7841baa947!8m2!3d53.5628098!4d14.8259717!16s%2Fg%2F11cmd86m65"
+  },
+  "features": {
+    "amenities": [
+      "Płatność kartą",
+      "Płatności cyfrowe",
+      "Darmowe WiFi",
+      "Krzesełka dla dzieci",
+      "Ogródek piwny",
+      "Parking",
+      "Rezerwacje",
+      "Siedziska",
+      "Alkohol",
+      "Parking uliczny",
+      "Na wynos",
+      "Dostęp dla wózków",
+      "Wino i Piwo",
+      "Przyjazny dla psów"
+    ],
+    "accessibility": {
+      "wheelchairAccessible": true,
+      "childFriendly": true,
+      "petFriendly": true
+    },
+    "services": [
+      "Dine-in",
+      "Takeout",
+      "Reservations",
+      "Outdoor seating",
+      "Beer garden",
+      "Private events",
+      "Birthday parties"
+    ]
+  },
+  "menu": {
+    "categories": ["Burgery", "Lunch", "Napoje & Kraft"],
+    "hasVegetarianOptions": true,
+    "hasVeganOptions": false,
+    "menuUrl": "https://www.pyszne.pl/menu/chmiel-do-uwolnienia-goleniow-nadrzeczna"
+  },
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "CHMIEL Do Uwolnienia",
+    "image": "https://chmieldouwolnienia.pl/logo-full.png",
+    "description": "Autorskie burgery, rzemieślnicze piwo kraftowe i wyjątkowa atmosfera w sercu Goleniowa.",
+    "servesCuisine": ["American", "Polish", "Pub Food"],
+    "priceRange": "$$",
+    "telephone": "+48451568912",
+    "email": "pub@chmieldouwolnienia.pl",
+    "url": "https://chmieldouwolnienia.pl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Nadrzeczna 8",
+      "addressLocality": "Goleniów",
+      "addressRegion": "Zachodniopomorskie",
+      "postalCode": "72-100",
+      "addressCountry": "PL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "53.5628098",
+      "longitude": "14.8259717"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Monday",
+        "opens": null,
+        "closes": null
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+        "opens": "14:00",
+        "closes": "22:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "13:00",
+        "closes": "00:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "13:00",
+        "closes": "22:00"
+      }
+    ],
+    "acceptsReservations": "True",
+    "paymentAccepted": ["Cash", "Credit Card", "Digital Payment"],
+    "sameAs": [
+      "https://www.facebook.com/chmieldouwolnienia",
+      "https://www.instagram.com/chmieldouwolnienia/"
+    ],
+    "hasMenu": "https://www.pyszne.pl/menu/chmiel-do-uwolnienia-goleniow-nadrzeczna",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "250"
+    }
+  },
+  "localBusiness": {
+    "areaServed": [
+      "Goleniów",
+      "Szczecin",
+      "Zachodniopomorskie",
+      "Police",
+      "Stargard"
+    ],
+    "knowsAbout": [
+      "Piwo kraftowe",
+      "Burgery",
+      "Gastropub",
+      "Ogródek piwny",
+      "Imprezy urodzinowe",
+      "Catering"
+    ]
+  },
+  "faq": [
+    {
+      "question": "Czy muszę rezerwować stolik?",
+      "answer": "W weekendy (piątek-sobota) warto zadzwonić, bo bywa tłoczno. W tygodniu zazwyczaj znajdzie się miejsce dla każdego 'z ulicy'. Jak planujesz wpaść większą ekipą (6+ osób), daj znać wcześniej, przygotujemy stolik."
+    },
+    {
+      "question": "Macie coś bez mięsa?",
+      "answer": "Jasne. Nie jesteśmy typową burgerownią tylko dla mięsożerców. Mamy świetne wege burgery i przekąski do piwa, które nie widziały mięsa. Każdy wyjdzie najedzony."
+    },
+    {
+      "question": "Mogę zabrać psa?",
+      "answer": "Koniecznie! Psy są u nas mile widziane. Zawsze znajdzie się miska z wodą, a czasem nawet jakiś smaczek od obsługi (za zgodą właściciela!). Prosimy tylko, żeby piesek nie przeszkadzał innym gościom."
+    },
+    {
+      "question": "Robicie imprezy urodzinowe?",
+      "answer": "Pewnie! Złączymy stoły, ogarniemy przekąski i zadbamy o to, żeby szkło było pełne. Napisz do nas albo wpadnij pogadać przy barze, dogadamy szczegóły."
+    }
+  ],
+  "analytics": {
+    "googleAnalyticsId": "",
+    "facebookPixelId": "",
+    "googleTagManagerId": ""
+  },
+  "verification": {
+    "googleSiteVerification": "",
+    "bingSiteVerification": "",
+    "facebookDomainVerification": ""
+  }
+}

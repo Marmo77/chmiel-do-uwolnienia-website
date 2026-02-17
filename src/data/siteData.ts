@@ -1,14 +1,17 @@
 export const siteData = {
   name: "CHMIEL Do Uwolnienia",
+  logo_full: "/logo-full.png",
+  logo_nobg: "/logo-nobg.png",
   contact: {
     address: {
       street: "ul. Nadrzeczna 8",
       city: "Goleniów",
       zip: "72-100",
       full: "ul. Nadrzeczna 8, 72-100 Goleniów",
-      googleMapsUrl: "https://maps.app.goo.gl/somemapslink",
+      googleMapsUrl:
+        "https://www.google.com/maps/place/CHMIEL+DO+UWOLNIENIA+-+Restaurant+%26+Pub/@53.5629654,14.8258664,20.75z/data=!4m6!3m5!1s0x47009ed0be6cffab:0x322aae7841baa947!8m2!3d53.5628098!4d14.8259717!16s%2Fg%2F11cmd86m65",
     },
-    phone: "+48 451 568 912",
+    phone: "451 568 912",
     email: "pub@chmieldouwolnienia.pl",
   },
   hours: {
@@ -43,17 +46,17 @@ export const siteData = {
   ],
   links: {
     ordering:
-      "https://www.pyszne.pl/menu/chmiel-do-uwolnienia-goleniow-nadrzeczna?utm_source=tripadvisor&utm_medium=cps&utm_campaign=CM_P_TA_POL_PL_[ENGM]_[OTHR]_[TRIPADVISOR]_PERFDIS_10572073&TAHotelCode=10572073",
+      "https://www.pyszne.pl/menu/chmiel-do-uwolnienia-goleniow-nadrzeczna",
   },
   socials: {
-    facebook: "#",
-    instagram: "#",
+    facebook: "https://www.facebook.com/chmieldouwolnienia",
+    instagram: "https://www.instagram.com/chmieldouwolnienia/",
   },
   navItems: [
     { label: "Start", id: "start" },
     { label: "O Nas", id: "about" },
     { label: "Menu", id: "menu" },
-    { label: "Wydarzenia", id: "events" },
+    // { label: "Wydarzenia", id: "events" },
     { label: "Kontakt", id: "contact" },
   ],
 };

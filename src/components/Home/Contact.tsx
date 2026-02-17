@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
-import { CalendarIcon, Clock, Beer } from "lucide-react";
+import {
+  CalendarIcon,
+  Clock,
+  Beer,
+  ShoppingBag,
+  ArrowUpRight,
+  Phone,
+  Mail,
+} from "lucide-react";
 import { Calendar } from "../ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { format } from "date-fns";
@@ -148,10 +156,10 @@ const Contact = () => {
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/3 translate-y-1/3" />
 
       <div className="container relative z-10 mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Text Content */}
           <div className="lg:col-span-2 text-center lg:text-left space-y-6">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-2 mx-auto lg:mx-0">
+            <div className="inline-flex items-start px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-2 mx-auto lg:mx-0">
               <Beer className="w-3 h-3 mr-2" /> Rezerwacja Online
             </div>
             <h2 className="text-5xl md:text-7xl font-display font-bold text-white leading-[0.9]">
@@ -166,9 +174,43 @@ const Contact = () => {
               <p className="text-sm text-white/40 mb-2 font-display tracking-wide uppercase">
                 Bezpośredni kontakt
               </p>
-              <p className="text-2xl font-bold text-white">
-                {siteData.contact.phone}
-              </p>
+              <div className="flex md:items-start items-center flex-col gap-1 text-xl">
+                <div className="flex items-center gap-2 group">
+                  <Phone className="w-5 h-5 group-hover:text-primary transition-colors" />
+                  <p className=" font-bold text-white">
+                    {siteData.contact.phone}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 group">
+                  <Mail className="w-5 h-5 group-hover:text-primary transition-colors" />
+                  <p className=" font-bold text-white transition-colors">
+                    {siteData.contact.email}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Order Online Section */}
+            <div className="pt-8 border-t border-white/10 mt-8">
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/30 transition-colors group">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-primary/20 p-2 rounded-lg text-primary">
+                    <ShoppingBag className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-lg font-display font-medium tracking-wide">
+                    Wolisz zjeść w domu?
+                  </h4>
+                </div>
+                <p className="text-white/60 text-sm mb-6 font-light leading-relaxed">
+                  Nie masz ochoty na wyjście? Żaden problem. Zamów nasze burgery
+                  i przekąski z dostawą pod same drzwi.
+                </p>
+                <Button
+                  onClick={() => window.open(siteData.links.ordering, "_blank")}
+                  className="w-full bg-primary text-black hover:bg-white font-bold tracking-wider uppercase h-12 transition-all flex items-center justify-between px-6 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.2)]"
+                >
+                  Zamów Online <ArrowUpRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </div>
           </div>
 

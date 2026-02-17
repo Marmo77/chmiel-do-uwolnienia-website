@@ -1,173 +1,153 @@
-import React from "react";
-import {
-  MapPin,
-  Phone,
-  Clock,
-  CheckCircle2,
-  Mail,
-  Navigation,
-} from "lucide-react";
-import { siteData } from "../../data/siteData";
 import { Button } from "../ui/button";
+import { Clock, MapPin, Phone, ArrowUpRight, Mail } from "lucide-react";
+import { siteData } from "../../data/siteData";
 
-const InfoSection: React.FC = () => {
-  // Select a subset of important features to display
-  const highlightedFeatures = siteData.features.slice(0, 8); // Display first 8
-
+const InfoSection = () => {
   return (
-    <section
-      className="w-full py-20 bg-foreground border-t border-white/5"
-      id="about"
-    >
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-          {/* Left Column: Contact & Location */}
-          <div className="flex-1 space-y-12">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                Znajdź nas w <br />
-                <span className="text-primary">Goleniowie</span>
-              </h2>
-              <div className="flex items-start gap-4 mb-2">
-                <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <div>
-                  <p className="text-xl text-white font-medium">
-                    {siteData.contact.address.street}
-                  </p>
-                  <p className="text-white/60">
-                    {siteData.contact.address.zip}{" "}
-                    {siteData.contact.address.city}
-                  </p>
-                </div>
-              </div>
-              <div className="mt-6 flex flex-wrap gap-4">
-                <Button
-                  variant="outline"
-                  className="gap-2 border-white/10 hover:bg-white/5 hover:text-white"
-                  onClick={() =>
-                    window.open(
-                      siteData.contact.address.googleMapsUrl,
-                      "_blank",
-                    )
-                  }
-                >
-                  <Navigation className="w-4 h-4" /> Nawiguj
-                </Button>
-                <Button
-                  className="gap-2 bg-primary text-black hover:bg-primary/90"
-                  onClick={() =>
-                    document
-                      .getElementById("contact")
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
-                >
-                  Zarezerwuj Stolik
-                </Button>
-              </div>
-            </div>
+    <section className="bg-[#050505] relative overflow-hidden border-t border-white/5">
+      {/* Background Ambience */}
+      <div className="absolute left-0 bottom-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] pointer-events-none -translate-x-1/2 translate-y-1/2" />
 
-            <div className="space-y-6">
-              <h3 className="text-2xl font-display font-bold text-white">
-                Kontakt
-              </h3>
-              <div className="space-y-4">
-                <a
-                  href={`tel:${siteData.contact.phone.replace(/\s/g, "")}`}
-                  className="flex items-center gap-4 text-white/80 hover:text-primary transition-colors group"
-                >
-                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <span className="text-lg font-medium">
-                    {siteData.contact.phone}
-                  </span>
-                </a>
-                <a
-                  href={`mailto:${siteData.contact.email}`}
-                  className="flex items-center gap-4 text-white/80 hover:text-primary transition-colors group"
-                >
-                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <span className="text-lg font-medium">
-                    {siteData.contact.email}
-                  </span>
-                </a>
-              </div>
-            </div>
+      <div className="container mx-auto px-4 max-w-7xl relative z-10 pt-24 pb-12">
+        <div className="text-center mb-16">
+          <h2 className="text-xs font-bold text-primary tracking-[0.3em] uppercase mb-4">
+            Lokalizacja & Kontakt
+          </h2>
+          <h3 className="text-5xl font-display font-bold text-white">
+            ZNAJDŹ NAS
+          </h3>
+        </div>
 
-            <div className="space-y-6">
-              <h3 className="text-2xl font-display font-bold text-white">
-                Udogodnienia
-              </h3>
-              <div className="grid grid-cols-2 gap-3">
-                {highlightedFeatures.map((feature, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-2 text-sm text-white/60"
-                  >
-                    <CheckCircle2 className="w-4 h-4 text-primary/50" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
+        {/* Brutalist Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 border-y border-white/10">
+          {/* Column 1: Location */}
+          <div className="lg:border-r border-b lg:border-b-0 border-white/10 p-10 flex flex-col items-center text-center group transition-colors hover:bg-white/5 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+            <div className="w-16 h-16 rounded-full bg-[#111] border border-white/10 flex items-center justify-center mb-8 text-white group-hover:text-primary group-hover:border-primary transition-all shadow-xl">
+              <MapPin className="w-7 h-7" />
             </div>
-          </div>
-
-          {/* Right Column: Hours & Map/Image */}
-          <div className="flex-1 w-full space-y-8">
-            {/* Map Placeholder */}
-            <div className="w-full h-64 md:h-80 bg-zinc-800 rounded-2xl overflow-hidden relative group">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.167825310862!2d14.828854976735522!3d53.66699197258451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa091a1a72288d%3A0x6e2c3c6c138670b8!2sNadrzeczna%208%2C%2072-100%20Goleni%C3%B3w!5e0!3m2!1spl!2spl!4v1709669000000!5m2!1spl!2spl"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: "grayscale(100%) invert(90%)" }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-              />
-              <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-4 py-2 rounded-lg text-xs font-bold text-white border border-white/10 pointer-events-none">
-                ul. Nadrzeczna 8
-              </div>
+            <h4 className="text-2xl font-display font-bold text-white mb-4 tracking-wide">
+              ADRES
+            </h4>
+            <div className="space-y-1 text-white/60 mb-8 font-light leading-relaxed">
+              <p className="text-white text-lg font-semibold">
+                {siteData.contact.address.street}
+              </p>
+              <p>
+                {siteData.contact.address.zip} {siteData.contact.address.city}
+              </p>
             </div>
-
-            <div className="bg-white/5 rounded-2xl p-8 border border-white/5">
-              <div className="flex items-center gap-3 mb-6">
-                <Clock className="w-5 h-5 text-primary" />
-                <h3 className="text-xl font-display font-bold text-white">
-                  Godziny Otwarcia
-                </h3>
-              </div>
-              <div className="space-y-4">
-                {siteData.hours.display.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex justify-between items-center text-sm border-b border-white/5 pb-3 last:border-0 last:pb-0"
-                  >
-                    <span className="text-white/60">{item.day}</span>
-                    <span
-                      className={
-                        item.hours === "Nieczynne"
-                          ? "text-red-400"
-                          : "text-white font-medium"
-                      }
-                    >
-                      {item.hours}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             <Button
-              className="w-full py-6 text-lg rounded-xl bg-[#ff8000] hover:bg-[#ff8000]/90 text-white font-bold tracking-wide"
-              onClick={() => window.open(siteData.links.ordering, "_blank")}
+              variant="outline"
+              className="mt-auto gap-2 border-white/10 hover:bg-white/5 hover:text-white rounded-md uppercase tracking-widest text-xs h-12 px-8"
+              onClick={() =>
+                window.open(
+                  `${siteData.contact.address.googleMapsUrl}`,
+                  "_blank",
+                )
+              }
             >
-              ZAMÓW ONLINE
+              Nawiguj <ArrowUpRight className="ml-2 w-3 h-3" />
             </Button>
           </div>
+
+          {/* Column 2: Hours */}
+          <div className="lg:border-r border-b lg:border-b-0 border-white/10 p-10 flex flex-col items-center group transition-colors hover:bg-white/5 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center" />
+            <div className="w-16 h-16 rounded-full bg-[#111] border border-white/10 flex items-center justify-center mb-8 text-white group-hover:text-primary group-hover:border-primary transition-all shadow-xl">
+              <Clock className="w-7 h-7" />
+            </div>
+            <h4 className="text-2xl font-display font-bold text-white mb-6 tracking-wide">
+              GODZINY
+            </h4>
+            <div className="w-full space-y-3">
+              {siteData.hours.display.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex justify-between items-center text-sm w-full border-b border-white/5 pb-2 last:border-0"
+                >
+                  <span className="text-white/40 uppercase tracking-wider font-semibold text-[10px]">
+                    {item.day}
+                  </span>
+                  <span
+                    className={
+                      item.hours === "Nieczynne"
+                        ? "text-red-400"
+                        : "text-white font-medium"
+                    }
+                  >
+                    {item.hours}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Column 3: Contact */}
+          <div className="p-10 flex flex-col items-center text-center group transition-colors hover:bg-white/5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-full h-1 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
+            <div className="w-16 h-16 rounded-full bg-[#111] border border-white/10 flex items-center justify-center mb-8 text-white group-hover:text-primary group-hover:border-primary transition-all shadow-xl">
+              <Phone className="w-7 h-7" />
+            </div>
+            <h4 className="text-2xl font-display font-bold text-white mb-4 tracking-wide">
+              KONTAKT
+            </h4>
+            <div className="space-y-6 mb-8 w-full">
+              <div>
+                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">
+                  Rezerwacje
+                </p>
+                <a
+                  href={`tel:${siteData.contact.phone.replace(/\s/g, "")}`}
+                  className="text-2xl font-bold text-white hover:text-primary transition-colors block"
+                >
+                  {siteData.contact.phone}
+                </a>
+              </div>
+              <div className="w-12 h-px bg-white/10 mx-auto" />
+              <div>
+                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-1">
+                  E-mail
+                </p>
+                <a
+                  href={`mailto:${siteData.contact.email}`}
+                  className="text-lg text-white/80 hover:text-white transition-colors block"
+                >
+                  {siteData.contact.email}
+                </a>
+              </div>
+            </div>
+            <Button
+              className="mt-auto bg-primary text-black hover:bg-white w-full rounded-md uppercase tracking-widest text-xs h-12 font-bold"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Rezerwuj Online
+            </Button>
+          </div>
+        </div>
+
+        {/* Bottom Banner */}
+        <div className="mt-16 p-8 rounded-xl bg-[#111] border border-white/5 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 text-center md:text-left">
+          <div>
+            <h5 className="text-white text-lg font-semibold tracking-wide mb-1">
+              Planujesz imprezę ?
+            </h5>
+            <p className="text-white/50 text-sm">
+              U nas zorganizujesz ją wygodnie, z indywidualnie ustalonym menu i
+              przyjazną atmosferą.
+            </p>
+          </div>
+          <a
+            href={`mailto:${siteData.contact.email}`}
+            className="text-primary font-bold hover:text-white transition-colors flex items-center"
+          >
+            <Mail className="w-4 h-4 mr-2" />
+            Zapytaj o ofertę
+          </a>
         </div>
       </div>
     </section>
