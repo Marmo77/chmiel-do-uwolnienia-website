@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import { ArrowRight, Beer, Utensils } from "lucide-react";
+import { ArrowRight, Utensils } from "lucide-react";
 import { siteData } from "../../data/siteData";
 
 const Hero = () => {
@@ -23,10 +23,10 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-primary/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 z-0 mix-blend-overlay" />
 
       <div className="container relative z-10 px-4 pt-16 text-center">
-        <div className="inline-flex items-center justify-center px-6 py-2 mb-8 rounded-full bg-white/10 border border-white/20 shadow-lg text-white text-sm font-bold tracking-wide animate-in fade-in slide-in-from-bottom-4 duration-1000 hover:scale-105 transition-transform cursor-default backdrop-blur-md">
+        {/* <div className="inline-flex items-center justify-center px-6 py-2 mb-8 rounded-full bg-white/10 border border-white/20 shadow-lg text-white text-sm font-bold tracking-wide animate-in fade-in slide-in-from-bottom-4 duration-1000 hover:scale-105 transition-transform cursor-default backdrop-blur-md">
           <Beer className="w-4 h-4 mr-2 text-primary" />
           <span className="text-white">Craftowe Nowości na Kranie!</span>
-        </div>
+        </div> */}
 
         <h1 className="text-7xl md:text-9xl font-display font-bold tracking-tight text-white mb-6 drop-shadow-xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150 leading-[0.9]">
           UWOLNIJ <br />

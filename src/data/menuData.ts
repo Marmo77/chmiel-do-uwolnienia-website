@@ -17,8 +17,8 @@ export const menuData: MenuCategory[] = [
     id: "lunch",
     label: "Lunch",
     menuImages: [
-      "https://cdn.website.dish.co/media/48/ca/9394872/Menu-lunch-EN.jpg",
       "https://cdn.website.dish.co/media/f0/db/9394879/Menu-lunch.jpg",
+      "https://cdn.website.dish.co/media/48/ca/9394872/Menu-lunch-EN.jpg",
     ],
   },
   {

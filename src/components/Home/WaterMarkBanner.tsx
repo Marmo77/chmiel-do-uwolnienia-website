@@ -1,7 +1,7 @@
 const WaterMarkBanner = ({
   creatorName = "Marmo77",
-  email = "oflebled@gmail.com",
-  //   phone = "+48 501 677 281",
+  email = "aleksydobrodziej@gmail.com",
+  phone = "+48 510 378 629",
 }) => {
   return (
     <div className="sticky bottom-0 right-0 w-full z-50 bg-yellow-400/90 text-yellow-950 px-4 py-1.5 shadow-sm backdrop-blur-sm">
@@ -31,13 +31,13 @@ const WaterMarkBanner = ({
           >
             {email}
           </a>
-          {/* <span className="hidden sm:inline">|</span>
+          <span className="hidden sm:inline">|</span>
           <a
             href={`tel:${phone.replace(/\s/g, "")}`}
             className="hover:underline hover:text-black transition-colors"
           >
             {phone}
-          </a> */}
+          </a>
         </div>
       </div>
     </div>
